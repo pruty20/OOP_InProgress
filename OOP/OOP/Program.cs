@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace OOP
 {
@@ -7,13 +8,57 @@ namespace OOP
 		public static void Main(string[] args)
 		{
 
+			void myBuilder()
+            {
+                
 
-            Alergies newAlergyObject = new Alergies(511);
+                StringBuilder myStringBuilder = new StringBuilder();
 
-            newAlergyObject.PrintAlergies(newAlergyObject.listAlergies);
+                StringBuilder newString = new StringBuilder();
 
-  
+                StringBuilder newString2 = new StringBuilder();
 
+                myStringBuilder.Append("Portable Network Graphics");
+
+                int spaceIndex;
+
+
+    //            while (myStringBuilder.Length > 0)
+				//{
+				//    spaceIndex = myStringBuilder.ToString().IndexOf(' ');
+				//    newString.Append(myStringBuilder[0]);
+				//	myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
+				//}
+
+
+                //Console.WriteLine(newString);
+
+				spaceIndex = myStringBuilder.ToString().IndexOf(' ');
+				newString.Append(myStringBuilder[0]);
+                myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
+
+                spaceIndex = myStringBuilder.ToString().IndexOf(' ');
+				newString.Append(myStringBuilder[0]);
+				myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
+
+				spaceIndex = myStringBuilder.ToString().IndexOf(' ');
+				newString.Append(myStringBuilder[0]);
+				myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
+
+		
+
+
+
+				Console.WriteLine(newString);
+                Console.WriteLine(myStringBuilder);
+                Console.WriteLine(myStringBuilder.Length);
+
+
+
+
+            }
+
+            myBuilder();
 
         }
 	}

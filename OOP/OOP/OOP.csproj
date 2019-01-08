@@ -37,6 +37,7 @@
     <Compile Include="OOP2.cs" />
     <Compile Include="OOP3.cs" />
     <Compile Include="Alergies.cs" />
+    <Compile Include="Acronym.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
