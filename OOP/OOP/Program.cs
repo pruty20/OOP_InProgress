@@ -22,36 +22,49 @@ namespace OOP
 
                 int spaceIndex;
 
+           
 
-    //            while (myStringBuilder.Length > 0)
-				//{
-				//    spaceIndex = myStringBuilder.ToString().IndexOf(' ');
-				//    newString.Append(myStringBuilder[0]);
-				//	myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
-				//}
+
+
+                while (myStringBuilder.ToString().IndexOf(' ') != -1)
+				{
+				    spaceIndex = myStringBuilder.ToString().IndexOf(' ');
+                    newString.Append(myStringBuilder[0]);
+                    myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
+                    if(myStringBuilder.ToString().IndexOf(' ') != -1)
+                    {
+                        newString.Append(myStringBuilder[0]);
+                    }
+
+				}
+
+                Console.WriteLine(myStringBuilder);
+                Console.WriteLine(newString);
+
+
+
+
+				//spaceIndex = myStringBuilder.ToString().IndexOf(' ');
+				//newString.Append(myStringBuilder[0]);
+    //            myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
+
+    //            spaceIndex = myStringBuilder.ToString().IndexOf(' ');
+				//newString.Append(myStringBuilder[0]);
+				//myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
+
+				//spaceIndex = myStringBuilder.ToString().IndexOf(' ');
+				//newString.Append(myStringBuilder[0]);
+				//myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
+
+      
+
+
+
 
 
                 //Console.WriteLine(newString);
-
-				spaceIndex = myStringBuilder.ToString().IndexOf(' ');
-				newString.Append(myStringBuilder[0]);
-                myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
-
-                spaceIndex = myStringBuilder.ToString().IndexOf(' ');
-				newString.Append(myStringBuilder[0]);
-				myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
-
-				spaceIndex = myStringBuilder.ToString().IndexOf(' ');
-				newString.Append(myStringBuilder[0]);
-				myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
-
-		
-
-
-
-				Console.WriteLine(newString);
-                Console.WriteLine(myStringBuilder);
-                Console.WriteLine(myStringBuilder.Length);
+                //Console.WriteLine(myStringBuilder);
+                //Console.WriteLine(myStringBuilder.Length);
 
 
 
