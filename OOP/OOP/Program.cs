@@ -17,38 +17,22 @@ namespace OOP
 
                 StringBuilder newString = new StringBuilder();
 
-                myStringBuilder.Append("Portable Network Graphics Hjk");
+                myStringBuilder.Append("Portable Network Graphics Ion Marin");
+
+
 
                 int indexSpace;
 
-                do
+
+
+                newString.Append(myStringBuilder[0]);
+
+                while(myStringBuilder.ToString().IndexOf(' ') != -1)
                 {
-                    newString.Append(myStringBuilder[0]);
                     indexSpace = myStringBuilder.ToString().IndexOf(' ');
+                    newString.Append(myStringBuilder[indexSpace + 1]);
                     myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
-
-                } while (myStringBuilder.ToString().LastIndexOf(' ') != -1);
-
-
-     //           while (myStringBuilder.ToString().LastIndexOf(' ') != -1)
-     //           {
-					//newString.Append(myStringBuilder[0]);
-					//indexSpace = myStringBuilder.ToString().IndexOf(' ');
-					//myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
-                //}
-
-
-    //            newString.Append(myStringBuilder[0]);
-    //            indexSpace = myStringBuilder.ToString().IndexOf(' ');
-    //            myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
-
-				//newString.Append(myStringBuilder[0]);
-				//indexSpace = myStringBuilder.ToString().IndexOf(' ');
-				//myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
-
-				//newString.Append(myStringBuilder[0]);
-				//indexSpace = myStringBuilder.ToString().IndexOf(' ');
-				//myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1)
+                }
 
 
 
