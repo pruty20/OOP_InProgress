@@ -7,6 +7,7 @@ namespace OOP
 	{
 		public static void Main(string[] args)
 		{
+            myBuilder();
 
 			void myBuilder()
             {
@@ -16,27 +17,40 @@ namespace OOP
 
                 StringBuilder newString = new StringBuilder();
 
-                StringBuilder newString2 = new StringBuilder();
+                myStringBuilder.Append("Portable Network Graphics Hjk");
 
-                myStringBuilder.Append("Portable Network Graphics");
+                int indexSpace;
 
-                int spaceIndex;
-
-           
-
-
-
-                while (myStringBuilder.ToString().IndexOf(' ') != -1)
-				{
-				    spaceIndex = myStringBuilder.ToString().IndexOf(' ');
+                do
+                {
                     newString.Append(myStringBuilder[0]);
-                    myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
-                    if(myStringBuilder.ToString().IndexOf(' ') != -1)
-                    {
-                        newString.Append(myStringBuilder[0]);
-                    }
+                    indexSpace = myStringBuilder.ToString().IndexOf(' ');
+                    myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
 
-				}
+                } while (myStringBuilder.ToString().LastIndexOf(' ') != -1);
+
+
+     //           while (myStringBuilder.ToString().LastIndexOf(' ') != -1)
+     //           {
+					//newString.Append(myStringBuilder[0]);
+					//indexSpace = myStringBuilder.ToString().IndexOf(' ');
+					//myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
+                //}
+
+
+    //            newString.Append(myStringBuilder[0]);
+    //            indexSpace = myStringBuilder.ToString().IndexOf(' ');
+    //            myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
+
+				//newString.Append(myStringBuilder[0]);
+				//indexSpace = myStringBuilder.ToString().IndexOf(' ');
+				//myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
+
+				//newString.Append(myStringBuilder[0]);
+				//indexSpace = myStringBuilder.ToString().IndexOf(' ');
+				//myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1)
+
+
 
                 Console.WriteLine(myStringBuilder);
                 Console.WriteLine(newString);
@@ -44,34 +58,11 @@ namespace OOP
 
 
 
-				//spaceIndex = myStringBuilder.ToString().IndexOf(' ');
-				//newString.Append(myStringBuilder[0]);
-    //            myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
-
-    //            spaceIndex = myStringBuilder.ToString().IndexOf(' ');
-				//newString.Append(myStringBuilder[0]);
-				//myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
-
-				//spaceIndex = myStringBuilder.ToString().IndexOf(' ');
-				//newString.Append(myStringBuilder[0]);
-				//myStringBuilder = myStringBuilder.Remove(0, spaceIndex + 1);
-
-      
-
-
-
-
-
-                //Console.WriteLine(newString);
-                //Console.WriteLine(myStringBuilder);
-                //Console.WriteLine(myStringBuilder.Length);
-
-
 
 
             }
 
-            myBuilder();
+
 
         }
 	}
