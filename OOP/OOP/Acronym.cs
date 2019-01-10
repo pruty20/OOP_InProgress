@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 namespace OOP
 {
 	/*
@@ -10,14 +11,40 @@ namespace OOP
 
     public class Acronym
     {
-        public Acronym()
+        public Acronym(string phrase)
         {
+            PrintResult(phrase);
+   
         }
 
-        //public string AcronymBuilder(string)
-        //{
-            
-        //}
+		public void PrintResult(string phrase)
+		{
+            Console.WriteLine(this.AcronymBuilder(phrase));
+        }
+     
+
+        public string AcronymBuilder(string phrase)
+        {
+            int indexSpace;
+
+			StringBuilder myStringBuilder = new StringBuilder();
+
+			StringBuilder newString = new StringBuilder();
+
+            myStringBuilder.Append(phrase);
+
+
+			newString.Append(myStringBuilder[0]);
+
+			while (myStringBuilder.ToString().IndexOf(' ') != -1)
+			{
+				indexSpace = myStringBuilder.ToString().IndexOf(' ');
+				newString.Append(myStringBuilder[indexSpace + 1]);
+				myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
+			}
+
+            return newString.ToString();
+        }
 
 
 

@@ -7,44 +7,11 @@ namespace OOP
 	{
 		public static void Main(string[] args)
 		{
-            myBuilder();
-
-			void myBuilder()
-            {
-                
-
-                StringBuilder myStringBuilder = new StringBuilder();
-
-                StringBuilder newString = new StringBuilder();
-
-                myStringBuilder.Append("Portable Network Graphics Ion Marin");
-
-
-
-                int indexSpace;
-
-
-
-                newString.Append(myStringBuilder[0]);
-
-                while(myStringBuilder.ToString().IndexOf(' ') != -1)
-                {
-                    indexSpace = myStringBuilder.ToString().IndexOf(' ');
-                    newString.Append(myStringBuilder[indexSpace + 1]);
-                    myStringBuilder = myStringBuilder.Remove(0, indexSpace + 1);
-                }
-
-
-
-                Console.WriteLine(myStringBuilder);
-                Console.WriteLine(newString);
 
 
 
 
 
-
-            }
 
 
 

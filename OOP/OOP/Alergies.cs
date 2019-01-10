@@ -43,9 +43,9 @@ namespace OOP
 
     }
 
-    public class PrintAlergiesClass
+    public class PrintClassMethodResults
     {
-        public void PrintAlergies(List<Items> items)
+        public virtual void PrintResults(List<Items> items)
         {
             foreach (var item in items)
             {
@@ -55,7 +55,7 @@ namespace OOP
     }
 
 
-    public class Alergies: PrintAlergiesClass
+    public class Alergies: PrintClassMethodResults
     {
         public int Score
         {
