@@ -8,6 +8,16 @@ namespace OOP
 		public static void Main(string[] args)
 		{
 
+            BankAccount myAcc = new BankAccount();
+
+
+
+            BankAccount myAcc2 = new BankAccount();
+
+            myAcc.PrintAccountNo();
+
+            myAcc.PrintAccountNo();
+
 
 
 
