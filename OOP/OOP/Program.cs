@@ -8,15 +8,30 @@ namespace OOP
 		public static void Main(string[] args)
 		{
 
-            BankAccount myAcc = new BankAccount();
+            BankAccount myBankAcc = new BankAccount();
+
+            myBankAcc.Open();
+
+            Console.WriteLine(myBankAcc.IsBankAccOpen);
+
+            Console.WriteLine(myBankAcc.Amount);
+
+            myBankAcc.Deposit(1000);
+
+            Console.WriteLine(myBankAcc.Amount);
+
+            Console.WriteLine(myBankAcc.Amount);
+
+            myBankAcc.Withdraw(100);
+
+            Console.WriteLine(myBankAcc.Amount);
+
+            myBankAcc.Close();
+
+            myBankAcc.Withdraw(100);
 
 
 
-            BankAccount myAcc2 = new BankAccount();
-
-            myAcc.PrintAccountNo();
-
-            myAcc.PrintAccountNo();
 
 
 
@@ -26,7 +41,7 @@ namespace OOP
 
 
         }
-	}
+    }
 
 
 	/* 1. Make an application where to model a animals keeping in mind that:

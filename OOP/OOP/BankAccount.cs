@@ -13,24 +13,73 @@ namespace OOP
         {
         }
 
-        public static int accountNumber;
+        private bool isBankAccOpen = false;
 
-
-
-
-        public static string SetAccountNo()
+        public bool IsBankAccOpen
         {
-            accountNumber = 1000000000 + 1;
-            string stringAccount = accountNumber.ToString();
-            string officialAccountNumber;
-
-            return officialAccountNumber = "ROINGB" + stringAccount;
+            get { return isBankAccOpen; }
         }
 
-        public void PrintAccountNo()
+
+        private decimal amount;
+
+        public decimal Amount
         {
-            Console.WriteLine($"Your account number is: {SetAccountNo()}");
+            get
+            { 
+                return amount;
+            }
         }
+
+
+        public void Open()
+        {
+            isBankAccOpen = true;
+        }
+
+        public void Close()
+        {
+            isBankAccOpen = false;
+        }
+
+
+        public void Deposit(decimal amountToDeposit)
+        {
+            if(isBankAccOpen == false)
+            {
+                Console.WriteLine("Cannot perform any operations against a closed account");
+            }
+            else
+            {
+                amount += amountToDeposit;
+            }
+
+        }
+
+
+        public void Withdraw(decimal amountToWithdraw)
+        {
+            if (isBankAccOpen == false)
+            {
+                Console.WriteLine("Cannot perform any operations against a closed account");
+            }
+            else
+            {
+                amount -= amountToWithdraw;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
