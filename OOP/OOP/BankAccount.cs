@@ -15,13 +15,13 @@ namespace OOP
 
         private bool isBankAccOpen = false;
 
+        private decimal amount;
+
         public bool IsBankAccOpen
         {
             get { return isBankAccOpen; }
         }
 
-
-        private decimal amount;
 
         public decimal Amount
         {
@@ -47,7 +47,7 @@ namespace OOP
         {
             if(isBankAccOpen == false)
             {
-                Console.WriteLine("Cannot perform any operations against a closed account");
+                throw new ArgumentException("\"Cannot perform any operations against a closed account\"");
             }
             else
             {
@@ -61,7 +61,7 @@ namespace OOP
         {
             if (isBankAccOpen == false)
             {
-                Console.WriteLine("Cannot perform any operations against a closed account");
+                throw new ArgumentException ("Cannot perform any operations against a closed account");
             }
             else
             {
@@ -69,14 +69,6 @@ namespace OOP
             }
 
         }
-
-
-
-
-
-
-
-
 
 
 

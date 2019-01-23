@@ -8,27 +8,8 @@ namespace OOP
 		public static void Main(string[] args)
 		{
 
-            BankAccount myBankAcc = new BankAccount();
-
-            myBankAcc.Open();
-
-            Console.WriteLine(myBankAcc.IsBankAccOpen);
-
-            Console.WriteLine(myBankAcc.Amount);
-
-            myBankAcc.Deposit(1000);
-
-            Console.WriteLine(myBankAcc.Amount);
-
-            Console.WriteLine(myBankAcc.Amount);
-
-            myBankAcc.Withdraw(100);
-
-            Console.WriteLine(myBankAcc.Amount);
-
-            myBankAcc.Close();
-
-            myBankAcc.Withdraw(100);
+            PigLatin myWord = new PigLatin("blo");
+            myWord.PrintTranslation();
 
 
 

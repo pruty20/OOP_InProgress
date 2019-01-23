@@ -38,6 +38,7 @@
     <Compile Include="Alergies.cs" />
     <Compile Include="Acronym.cs" />
     <Compile Include="BankAccount.cs" />
+    <Compile Include="PigLatin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
