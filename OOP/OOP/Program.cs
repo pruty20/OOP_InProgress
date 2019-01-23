@@ -8,8 +8,9 @@ namespace OOP
 		public static void Main(string[] args)
 		{
 
-            PigLatin myWord = new PigLatin("blo");
-            myWord.PrintTranslation();
+            RainDrops myDrop = new RainDrops(15);
+
+            Console.WriteLine(myDrop.returnString);
 
 
 
