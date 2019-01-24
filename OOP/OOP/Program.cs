@@ -9,18 +9,20 @@ namespace OOP
 		{
 
 
-            Zoo myZoo = new Zoo();
-            myZoo.BringAnimal("Horse");
+            Zoo myZoo = new Zoo("Circus");
+            myZoo.BringAnimal(new Horse() {FavouriteFood = "Carrots"});
+            myZoo.BringAnimal(new Horse() {FavouriteFood = "Apples" });
+            myZoo.BringAnimal(new Whale() {FavouriteFood = "Fish" });
+            myZoo.BringAnimal(new Zebra() {FavouriteFood = "Candy" });
+
+            myZoo.FedAnimals();
 
 
 
-            foreach (string item in myZoo.Animals)
-            {
-                Console.WriteLine(item);
+    
 
-            }
 
-                                 
+
 
 
 
