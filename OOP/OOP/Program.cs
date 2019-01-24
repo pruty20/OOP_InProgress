@@ -8,10 +8,19 @@ namespace OOP
 		public static void Main(string[] args)
 		{
 
-            RainDrops myDrop = new RainDrops(15);
 
-            Console.WriteLine(myDrop.returnString);
+            Zoo myZoo = new Zoo();
+            myZoo.BringAnimal("Horse");
 
+
+
+            foreach (string item in myZoo.Animals)
+            {
+                Console.WriteLine(item);
+
+            }
+
+                                 
 
 
 

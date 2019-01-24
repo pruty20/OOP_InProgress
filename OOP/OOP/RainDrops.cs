@@ -27,17 +27,26 @@ namespace OOP
             NumberConverter(toConvert);
         }
 
-        public StringBuilder returnString = new StringBuilder();
+        private StringBuilder returnString = new StringBuilder();
 
         public string NumberConverter(int toConvert)
         {
-            //int toConvert = 34;
-
-
-            if (toConvert % 3 == 0 && toConvert % 5 == 0)
+            if (toConvert % 3 == 0 && toConvert % 5 == 0 && toConvert % 7 == 0)
+			{
+				returnString.Append("PlingPlangPlong");
+			}
+            else if (toConvert % 3 == 0 && toConvert % 5 == 0)
             {
                 returnString.Append("PlingPlang");
             }
+			else if (toConvert % 3 == 0 && toConvert % 7 == 0)
+			{
+				returnString.Append("PlingPlong");
+			}
+			else if (toConvert % 5 == 0 && toConvert % 7 == 0)
+			{
+				returnString.Append("PlangPlong");
+			}
             else if (toConvert % 3 == 0)
             {
                 returnString.Append("Pling");
@@ -46,10 +55,20 @@ namespace OOP
             {
                 returnString.Append("Plang");
             }
-
-
+			else if (toConvert % 7 == 0)
+			{
+				returnString.Append("Plong");
+			}
+            else
+            {
+                returnString.Append(toConvert.ToString());
+            }
             return returnString.ToString();
+        }
 
+        public void PrintRainDrops()
+        {
+            Console.WriteLine(returnString);
         }
 
 

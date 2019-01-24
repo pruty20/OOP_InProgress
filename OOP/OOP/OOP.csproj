@@ -40,6 +40,7 @@
     <Compile Include="BankAccount.cs" />
     <Compile Include="PigLatin.cs" />
     <Compile Include="RainDrops.cs" />
+    <Compile Include="Zoo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
